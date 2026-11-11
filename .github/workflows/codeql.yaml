@@ -30,7 +30,7 @@ jobs:
         uses: github/codeql-action/init@v3
         with:
           languages: ${{ matrix.language }}
-          # queries: security-extended,security-and-quality # optional suites: security-and-quality
+          queries: security-extended,security-and-quality # optional suites: security-and-quality
           # For compiled languages, try Autobuild first (ignored for script
           # languages)
       - name: Autobuild

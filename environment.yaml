@@ -1,0 +1,11 @@
+name: roage-rage-bot
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.9
+  - pip
+  - python-dotenv
+  - pip:
+      - discord.py
+      - psutil

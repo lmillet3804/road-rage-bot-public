@@ -1,4 +1,3 @@
-import json
 import random
 import os
 from pathlib import Path
@@ -498,8 +497,6 @@ class DataWrapper:
     
     def choose_challenge_for_duel(self, duel: dict, challenge_number: int):
         duel["challenge"] = duel["challenge1"] if challenge_number == 1 else duel["challenge2"]
-        available_duels = self.get_available_duels()
-        available_duels = [d for d in available_duels if d["description"] != duel["challenge"]["description"]]
         self.game_duels_collection.replace_one({"team1": duel["team1"], "team2": duel["team2"], "city": duel["city"]}, duel)
         self.available_duels_collection.delete_one({"description": duel["challenge"]["description"]})
 

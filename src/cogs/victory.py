@@ -134,7 +134,7 @@ class Victory(commands.Cog):
             city = cities[city_names.index(city_name)]
             city_owner = self.bot.dw.get_city_owner(city['city'])
 
-            if city_owner == None:
+            if city_owner is None:
                 city_str = "**unclaimed**. :eyes:"
             else:
                 city_str = f"claimed by **{city_owner}**. "
@@ -169,7 +169,7 @@ class Victory(commands.Cog):
                 region_name = get_region_from_id(arg)
                 region_owner, num_cities = self.bot.dw.get_region_owner(arg)
 
-                if region_owner == None:
+                if region_owner is None:
                     region_str = "**unclaimed**. :eyes:"
                 else:
                     region_str = f"claimed by **{region_owner}** with **{num_cities}** cities. "

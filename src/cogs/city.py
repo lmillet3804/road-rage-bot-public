@@ -98,7 +98,7 @@ class City(commands.Cog):
             if self.bot.dw.team_has_penalty(team_name):
                 return await ctx.send(":warning: Your team is currently under a penalty and cannot draw or complete city challenges. Please wait until your penalty time is over.")
             current_challenge = self.bot.dw.get_active_city_challenge_by_team_name(team_name)
-            if current_challenge == None:
+            if current_challenge is None:
                 await ctx.send(":warning: Your team does not have an active city challenge to complete.")
                 return
             
@@ -134,7 +134,7 @@ class City(commands.Cog):
             if self.bot.dw.team_has_penalty(team_name):
                 return await ctx.send(":warning: Your team is currently under a penalty and cannot draw or complete city challenges. Please wait until your penalty time is over.")
             current_challenge = self.bot.dw.get_active_city_challenge_by_team_name(team_name)
-            if current_challenge == None:
+            if current_challenge is None:
                 await ctx.send(":warning: Your team does not have an active city challenge to fail.")
                 return
 
@@ -165,7 +165,7 @@ class City(commands.Cog):
                 await ctx.send(":sob: You must be part of a team to view your city challenge.")
                 return
             current_challenge = self.bot.dw.get_active_city_challenge_by_team_name(team_name)
-            if current_challenge == None:
+            if current_challenge is None:
                 await ctx.send(":warning: Your team does not have an active city challenge.")
                 return
             

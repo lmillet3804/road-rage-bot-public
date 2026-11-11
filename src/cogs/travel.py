@@ -2,7 +2,6 @@ import discord
 import os
 from discord.ext import commands
 from utils.lists import get_state, get_team_name_from_roles
-from functools import cmp_to_key
 import time
 import asyncio
 
